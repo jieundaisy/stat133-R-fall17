@@ -1,0 +1,179 @@
+---
+title: "hw01"
+author: "JIEUN HWANG"
+date: "9/23/2017"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# data
+
+```{r}
+# load data file
+load("data/nba2017-salary-points.RData")
+
+# list the available objects
+ls()
+```
+
+# 1
+
+```{r}
+salary_m <-round(salary/1000000, digits=2)
+salary_m
+
+experience = replace(experience, experience=="R", 0)
+experience
+experience <- as.integer(experience) 
+class(experience)
+
+```
+
+
+```{r}
+position <- as.factor(position)
+class(position)
+
+levels(position) <- c("C"="Center","PF"="power_fwd","PG"="point_guard","SF"="small_fwd","SG"="Shoot_guard")
+table(position)
+```
+
+# 2
+
+```{r}
+plot(points,salary_m,col= "orange", main ="Scatterplot of Points and Salary",xlab="Points", ylab="Salary (in millions)")
+```
+
+# 3
+
+```{r}
+num_p <- length(points)
+mean_of_points <- 1/num_p*sum(points)
+mean_of_points
+
+num_s <- length(salary_m)
+mean_of_salary_m <- 1/num_s*sum(salary_m)
+mean_of_salary_m
+
+var_of_points <- 1/(num_p-1)*sum((points-mean_of_points)^2)
+var_of_points
+
+var_of_salary_m <- 1/(num_s-1)*sum((salary_m-mean_of_salary_m)^2)
+var_of_salary_m
+
+sd_points <- sqrt(var_of_points)
+sd_points
+
+sd_salary_m <- sqrt(var_of_salary_m)
+sd_salary_m
+
+cov_p_s <- 1/(num_p-1)*sum((points-mean_of_points)*(salary_m-mean_of_salary_m))
+cov_p_s
+
+cor_p_s <- cov_p_s/(sd_points*sd_salary_m)
+cor_p_s
+```
+
+# 4
+
+```{r}
+#slope term
+slope <- (cor_p_s)*(sd_salary_m/sd_points)
+slope
+
+#intercept term
+intercept <- mean_of_salary_m - (slope * mean_of_points)
+intercept
+
+# y- hat (the vector of predicted values)
+y_hat <- intercept + (slope*points)
+y_hat
+
+summary(y_hat)
+
+# inline code for regression equation 
+slope1 <- cor(points,salary_m)*sd(salary_m)/sd(points)
+intercept0 <- mean(salary_m)-(slope1*mean(points))
+regr_equation <- intercept0 + (slope1*points)
+regr_equation
+summary(regr_equation)
+```
+
+# how do you interpret the slope coeffcient?
+# it represents the rate of change of salary_m (Y) as a function of changes in points(X).
+
+# how you interpret the intercept term?
+# The intercept is the expected mean value of salary_m (Y) when all points(X)=0.
+
+```{r}
+# what is the predicted salary for a player that score?
+predict_0s <- intercept0 + (slope1*0)
+predict_0s
+
+predict_100s <- intercept0 +(slope1*100)
+predict_100s
+
+predict_500s <- intercept0 +(slope1*500)
+predict_500s
+
+predict_1000s <- intercept0 +(slope1*1000)
+predict_1000s
+
+predict_2000s <- intercept0 +(slope1*2000)
+predict_2000s
+
+```
+
+# 5
+
+```{r}
+plot(points, salary_m, col ="orange", main = "Regression and Lowess lines",xlab="Points", ylab="Salary (in millions)")
+abline(a = intercept0, b =slope1,col="blue")
+lines(lowess(points,salary_m),col="red")
+text(2500,30,"lowess", col ="red")
+text(2400,19,"regression", col ="blue")
+```
+
+# 6
+
+```{r}
+R <- salary_m - y_hat
+summary(R)
+
+RSS <- sum(R^2)
+RSS
+
+TSS <- sum((salary_m - mean(salary_m)^2))
+TSS
+
+R2coefficient <- 1-(RSS/TSS)
+R2coefficient
+```
+
+#7
+
+```{r}
+plot(experience, salary_m,xlab="Points", ylab="Salary (in millions)",main ="Scatterplot with lowess smooth",col ="pink")
+lines(lowess(experience,salary_m),col="blue")
+require(scatterplot3d)
+scatterplot3d(points,experience,salary_m,main="3D Scatterplot")
+
+boxplot(salary_m ~ position, xlab="Position")
+
+```
+
+* scatterplot with lowess smooth : result is bell shape. It seems there is no strong relation between experience and salary.
+* 3D scatterplot : more points, more salary but not really strong connection with experience 
+* boxplot : not really strong relation between position and salary.
+* does experience seem to be related with salary? : Not really, because after 5 years experience, the line of lowess is decreasing.
+* does position seem to be related with salary? : Not really, because the median is similar for each position 
+
+
+#8
+
+* Honestly, everything was difficult for me. I finished homework alone and it tooks more than 6 hours. I really needed a help escpecially boxplot problem. This part made me feel frustrated. I realized I made a mistake of #1. That's why it didn't work when I made boxplot. I should work with the group next time. It is a challenge!
+
+
