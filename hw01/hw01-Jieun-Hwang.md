@@ -373,16 +373,16 @@ summary(regr_equation)
     ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
     ##   1.509   2.844   5.206   6.187   8.184  23.399
 
-how do you interpret the slope coeffcient?
+* how do you interpret the slope coeffcient?
 ==========================================
 
-it represents the rate of change of salary\_m (Y) as a function of changes in points(X).
+* it represents the rate of change of salary\_m (Y) as a function of changes in points(X).
 ========================================================================================
 
-how you interpret the intercept term?
+* how you interpret the intercept term?
 =====================================
 
-The intercept is the expected mean value of salary\_m (Y) when all points(X)=0.
+* The intercept is the expected mean value of salary\_m (Y) when all points(X)=0.
 ===============================================================================
 
 ``` r
