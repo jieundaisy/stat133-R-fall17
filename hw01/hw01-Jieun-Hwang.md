@@ -132,7 +132,7 @@ table(position)
 =
 
 ``` r
-plot(points,salary_m,col= "orange", main ="Scatterplot of Points and Salary",xlab="Points", ylab="Salary (in millions)")
+plot(points,salary_m,col= "orange", main ="Scatterplot of Points and Salary",xlab="Points", ylab="Salary (in millions)",cex=1.2,pch=0)
 ```
 
 ![](hw01-Jieun-Hwang_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-4-1.png)
