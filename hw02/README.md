@@ -1,6 +1,9 @@
 # HW02 - Basics of Data Frame
 
-Jieun Hwang
+- Student name: Jieun Hwang
+- Github username: jieundaisy
+- Lab section: 104
+- GSI: Xiaoqi Zhang
 
 * What is the data about?
     + nba2017-player-statistics
