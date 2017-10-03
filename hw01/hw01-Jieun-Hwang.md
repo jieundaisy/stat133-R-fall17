@@ -132,7 +132,7 @@ table(position)
 =
 
 ``` r
-plot(points,salary_m,col= "orange", main ="Scatterplot of Points and Salary",xlab="Points", ylab="Salary (in millions)")
+plot(points,salary_m,col= "orange", main ="Scatterplot of Points and Salary",xlab="Points", ylab="Salary (in millions)",cex=1.2,pch=0)
 ```
 
 ![](hw01-Jieun-Hwang_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-4-1.png)
@@ -373,17 +373,13 @@ summary(regr_equation)
     ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
     ##   1.509   2.844   5.206   6.187   8.184  23.399
 
-how do you interpret the slope coeffcient?
-==========================================
+* how do you interpret the slope coeffcient?
 
-it represents the rate of change of salary\_m (Y) as a function of changes in points(X).
-========================================================================================
+* it represents the rate of change of salary\_m (Y) as a function of changes in points(X).
 
-how you interpret the intercept term?
-=====================================
+* how you interpret the intercept term?
 
-The intercept is the expected mean value of salary\_m (Y) when all points(X)=0.
-===============================================================================
+* The intercept is the expected mean value of salary\_m (Y) when all points(X)=0.
 
 ``` r
 # what is the predicted salary for a player that score?
