@@ -1,5 +1,5 @@
 ---
-title: "hw02"
+title: "hw2"
 author: "JIEUN HWANG"
 date: "9/27/2017"
 output: github_document
