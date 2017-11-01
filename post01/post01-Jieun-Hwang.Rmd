@@ -92,20 +92,20 @@ library("roxygen2")
 2. Click `New directory` and `R package` as project type
 
 
-![](/Users/jieunhwang/stat133/stat133-hws-fall17/post01/image/2.png)
+![](./image/2.png)
 
-![](/Users/jieunhwang/stat133/stat133-hws-fall17/post01/image/3.png)
+![](./image/3.png)
 
 3. Type `Package name` you want and click `Create Project`
 
-![](/Users/jieunhwang/stat133/stat133-hws-fall17/post01/image/4.png)
+![](./image/4.png)
 
 4. You can see 'Hello, world!' code as an example and open `DESCRIPTION`file in Files.
    (You can close hello.R if you want to do)
-![](/Users/jieunhwang/stat133/stat133-hws-fall17/post01/image/5.png)
+![](./image/5.png)
 
 5. On `DESCRIPTION` file, you can add more datails about Title, Author and Description. Don't forget **saving it**. 
-![image of screenspot](/Users/jieunhwang/stat133/stat133-hws-fall17/post01/image/6.png)
+![image of screenspot](./image/6.png)
 
 6. Open new `R script` and write R code function you want to create. Here is my example of creating a funtion called `stats133_function`
 
@@ -121,7 +121,7 @@ stats133_function <- function(love=TRUE) {
 }
 ```
 
-![](/Users/jieunhwang/stat133/stat133-hws-fall17/post01/image/7.png)
+![](./image/7.png)
 
 
 7. Above R code, you should add `documantation` and make sure **what @param is in your function**.
@@ -144,35 +144,35 @@ stats133_function <- function(love=TRUE) {
    
    
    
-![](/Users/jieunhwang/stat133/stat133-hws-fall17/post01/image/8.png)
+![](./image/8.png)
 
 
 
 8. Click `Build`(right next to History button) and `More`(blue gear icon). then select `Configure Build Tools`. 
-![](/Users/jieunhwang/stat133/stat133-hws-fall17/post01/image/9.png)
+![](./image/9.png)
 
 
 9. As you can see Project Options pop-up, click `Build Tools`(on the left side of pop-up) and do `checkmark` for Generate documentation with Roxygen. 
-![](/Users/jieunhwang/stat133/stat133-hws-fall17/post01/image/10.png)
+![](./image/10.png)
 
 10. Do `checkmark` ALL on Roxygen Options and click OK. After exiting pop-up, click `Build & Reload`.
-![](/Users/jieunhwang/stat133/stat133-hws-fall17/post01/image/11.png)
+![](./image/11.png)
 
 
 11. Click `man` directory in Files to make sure there is Rd.file of your pacakge.
 
-![](/Users/jieunhwang/stat133/stat133-hws-fall17/post01/image/12.png)
-![](/Users/jieunhwang/stat133/stat133-hws-fall17/post01/image/13.png)
+![](./image/12.png)
+![](./image/13.png)
 
 
 12. Search your package by typing `your package name` and enjoy reading nice R Documntation of your package.
-![](/Users/jieunhwang/stat133/stat133-hws-fall17/post01/image/14.png)
-![](/Users/jieunhwang/stat133/stat133-hws-fall17/post01/image/15.png)
+![](./image/14.png)
+![](./image/15.png)
 
 
 13. Testing your own package if it is working! DONE! 
 
-![](/Users/jieunhwang/stat133/stat133-hws-fall17/post01/image/16.png)
+![](./image/16.png)
 
 
 *If you want to follow these steps by watching video, there are some good videos for you!*

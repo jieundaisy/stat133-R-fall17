@@ -81,17 +81,17 @@ Here are links for more details about [devtools package](https://github.com/hadl
 
 2.  Click `New directory` and `R package` as project type
 
-![](/Users/jieunhwang/stat133/stat133-hws-fall17/post01/image/2.png)
+![](./image/2.png)
 
-![](/Users/jieunhwang/stat133/stat133-hws-fall17/post01/image/3.png)
+![](./image/3.png)
 
 1.  Type `Package name` you want and click `Create Project`
 
-![](/Users/jieunhwang/stat133/stat133-hws-fall17/post01/image/4.png)
+![](./image/4.png)
 
-1.  You can see 'Hello, world!' code as an example and open `DESCRIPTION`file in Files. (You can close hello.R if you want to do) ![](/Users/jieunhwang/stat133/stat133-hws-fall17/post01/image/5.png)
+1.  You can see 'Hello, world!' code as an example and open `DESCRIPTION`file in Files. (You can close hello.R if you want to do) ![](./image/5.png)
 
-2.  On `DESCRIPTION` file, you can add more datails about Title, Author and Description. Don't forget **saving it**. ![image of screenspot](/Users/jieunhwang/stat133/stat133-hws-fall17/post01/image/6.png)
+2.  On `DESCRIPTION` file, you can add more datails about Title, Author and Description. Don't forget **saving it**. ![image of screenspot](./image/6.png)
 
 3.  Open new `R script` and write R code function you want to create. Here is my example of creating a funtion called `stats133_function`
 
@@ -107,7 +107,7 @@ stats133_function <- function(love=TRUE) {
 }
 ```
 
-![](/Users/jieunhwang/stat133/stat133-hws-fall17/post01/image/7.png)
+![](./image/7.png)
 
 1.  Above R code, you should add `documantation` and make sure **what @param is in your function**. And **save ALL!**
 
@@ -125,23 +125,23 @@ stats133_function <- function(love=TRUE) {
 #' @return If love=True, print "I love stat133!". If not, print "Sorry, I don't like R."
 ```
 
-![](/Users/jieunhwang/stat133/stat133-hws-fall17/post01/image/8.png)
+![](./image/8.png)
 
-1.  Click `Build`(right next to History button) and `More`(blue gear icon). then select `Configure Build Tools`. ![](/Users/jieunhwang/stat133/stat133-hws-fall17/post01/image/9.png)
+1.  Click `Build`(right next to History button) and `More`(blue gear icon). then select `Configure Build Tools`. ![](./image/9.png)
 
-2.  As you can see Project Options pop-up, click `Build Tools`(on the left side of pop-up) and do `checkmark` for Generate documentation with Roxygen. ![](/Users/jieunhwang/stat133/stat133-hws-fall17/post01/image/10.png)
+2.  As you can see Project Options pop-up, click `Build Tools`(on the left side of pop-up) and do `checkmark` for Generate documentation with Roxygen. ![](./image/10.png)
 
-3.  Do `checkmark` ALL on Roxygen Options and click OK. After exiting pop-up, click `Build & Reload`. ![](/Users/jieunhwang/stat133/stat133-hws-fall17/post01/image/11.png)
+3.  Do `checkmark` ALL on Roxygen Options and click OK. After exiting pop-up, click `Build & Reload`. ![](./image/11.png)
 
 4.  Click `man` directory in Files to make sure there is Rd.file of your pacakge.
 
-![](/Users/jieunhwang/stat133/stat133-hws-fall17/post01/image/12.png) ![](/Users/jieunhwang/stat133/stat133-hws-fall17/post01/image/13.png)
+![](./image/12.png) ![](./image/13.png)
 
-1.  Search your package by typing `your package name` and enjoy reading nice R Documntation of your package. ![](/Users/jieunhwang/stat133/stat133-hws-fall17/post01/image/14.png) ![](/Users/jieunhwang/stat133/stat133-hws-fall17/post01/image/15.png)
+1.  Search your package by typing `your package name` and enjoy reading nice R Documntation of your package. ![](./image/14.png) ![](./image/15.png)
 
 2.  Testing your own package if it is working! DONE!
 
-![](/Users/jieunhwang/stat133/stat133-hws-fall17/post01/image/16.png)
+![](./image/16.png)
 
 *If you want to follow these steps by watching video, there are some good videos for you!*
 
