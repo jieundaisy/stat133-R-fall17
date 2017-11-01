@@ -9,7 +9,7 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-# **Creating your own R package with RStudio! **
+# Creating your own R package with RStudio! 
 
 ### Introduction
 R package is the fundamental unit of shareable code in R and easy to share with other people. It bundles together data, code, documentation and description. You can install R package with `install.packages(“x”)` and use it in R with `library(“x”)`. Surprisingly, You can simply write your own R package to suit your needs even though you are not an expert of R.

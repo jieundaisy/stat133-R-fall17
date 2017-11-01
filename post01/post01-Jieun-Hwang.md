@@ -3,8 +3,8 @@ post01-Jieun-Hwang
 JIEUN HWANG
 10/29/2017
 
-**Creating your own R package with RStudio! **
-==============================================
+Creating your own R package with RStudio!
+=========================================
 
 ### Introduction
 
