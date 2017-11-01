@@ -3,8 +3,7 @@ title: "post01-Jieun-Hwang"
 author: "JIEUN HWANG"
 date: "10/29/2017"
 output:
-  html_document: default
-  github_document: default
+  github_document
 ---
 
 ```{r setup, include=FALSE}
@@ -86,7 +85,7 @@ library("roxygen2")
 1. Click `Project` icon and Create `New Project`
 
 
-       ![](/Users/jieunhwang/stat133/stat133-hws-fall17/post01/image/1.png)
+       ![](./image/1.png)
 
 
 

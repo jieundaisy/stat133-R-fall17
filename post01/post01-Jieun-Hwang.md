@@ -77,7 +77,7 @@ Here are links for more details about [devtools package](https://github.com/hadl
 
 1.  Click `Project` icon and Create `New Project`
 
-    ![](/Users/jieunhwang/stat133/stat133-hws-fall17/post01/image/1.png)
+    ![](./image/1.png)
 
 2.  Click `New directory` and `R package` as project type
 
