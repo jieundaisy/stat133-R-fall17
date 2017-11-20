@@ -1,0 +1,36 @@
+#  Comments and Reflections
+
+Reflect on what was hard/easy, problems you solved, helpful tutorials you read, etc.
+• Was this your first time writing unit tests? 
+yes
+
+• On a scale from 0 to 10, how confusing you found the logic of testthat tests? (0 not
+at all, 10 very confusing) 
+5
+
+• Was this your first time working with ggvis? 
+yes
+
+• On a scale from 0 to 10, how confusing you found the syntax of ggvis? (0 not at all,
+10 very confusing)
+7
+
+• Was this your first time working with conditional panels in shiny?
+yes
+
+• On a scale from 0 to 10, how challenging you found to work with the conditional panels?
+(0 not at all, 10 very challenging)
+9-10
+
+• So far we’ve exposed you to three graphing paradigms in R: base plots, ggplot, and
+now ggvis. Which do you like the most and why?
+ggplot because I get used to using syntax of ggplot so that I can play with it easily.
+
+• Did anyone help you completing the assignment? If so, who?
+GSI/professor 
+
+• How much time did it take to complete this HW?
+at least 4 days
+
+• What was the most time consuming part?
+shiny app
