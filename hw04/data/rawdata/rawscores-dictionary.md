@@ -9,20 +9,20 @@
 -   How many columns?
     -   16
 -   What are the column labels?
-    -   HW1 : homework1 score each 100 pts
-    -   HW2 : homework2 score each 100 pts
-    -   HW3 : homework3 score each 100 pts
-    -   HW4 : homework4 score each 100 pts
-    -   HW5 : homework5 score each 100 pts
-    -   HW6 : homework6 score each 100 pts
-    -   HW7 : homework7 score each 100 pts
-    -   HW8 : homework8 score each 100 pts
-    -   HW9 : homework9 score each 100 pts
-    -   ATT : the number of lab attendance (0 to 12)
-    -   QZ1 : quiz1 score 12 pts
-    -   QZ2 : quiz2 score 18 pts
-    -   QZ3 : quiz3 score 20 pts
-    -   QZ4 : quiz4 score 20 pts
-    -   EX1 : exam1 score 90 pts
-    -   EX2 : exam2 score 90 pts
+    -   HW1 : homework1 score
+    -   HW2 : homework2 score
+    -   HW3 : homework3 score
+    -   HW4 : homework4 score
+    -   HW5 : homework5 score
+    -   HW6 : homework6 score
+    -   HW7 : homework7 score
+    -   HW8 : homework8 score
+    -   HW9 : homework9 score
+    -   ATT : the number of lab attendance
+    -   QZ1 : quiz1 score
+    -   QZ2 : quiz2 score
+    -   QZ3 : quiz3 score
+    -   QZ4 : quiz4 score
+    -   EX1 : exam1 score
+    -   EX2 : exam2 score
 -   [rawscores](https://raw.githubusercontent.com/ucb-stat133/stat133-fall-2017/master/data/rawscores.csv)

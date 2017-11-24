@@ -7,7 +7,7 @@ rawscores <- read.csv('../data/rawdata/rawscores.csv', header=TRUE)
 sink(file = '../output/summary-rawscores.txt')
 str(rawscores, vec.len = 1)
 for(i in 1:ncol(rawscores)){
-print_stats(rawscores[,i])
+  print_stats(rawscores[,i])
 }
 sink()
 
@@ -39,8 +39,8 @@ rawscores<- cbind(rawscores, Test2)
 # Homework(drop the lowest score and then averaging)
 Homework <- c()
 for(i in 1:nrow(rawscores)){
-    newhw<- drop_lowest(as.numeric(rawscores[i,1:9]))
-    Homework[i] <- get_average(newhw)
+  newhw<- drop_lowest(as.numeric(rawscores[i,1:9]))
+  Homework[i] <- get_average(newhw)
 }
 rawscores <- cbind(rawscores,Homework)
 
@@ -52,6 +52,13 @@ for(i in 1:nrow(rawscores)){
 }
 rawscores<- cbind(rawscores,Quiz)
 
+# Lab score 
+Lab <- c()
+for(i in 1:nrow(rawscores)){
+  Lab[i]<- score_lab(rawscores$ATT[i])
+}
+rawscores<- cbind(rawscores,Lab)
+
 # Overall
 lab <- c()
 hw <- c()
@@ -60,16 +67,15 @@ test1 <- c()
 test2 <- c()
 total <- c()
 for(i in 1:nrow(rawscores)){
-   lab[i] <- score_lab(rawscores$ATT[i])*0.1
-   hw[i] <- (rawscores$Homework[i])*0.3
-   quiz[i] <- (rawscores$Quiz[i])*0.15
-   test1[i] <- (rawscores$Test1[i])*0.2
-   test2[i] <- (rawscores$Test2[i])*0.25
-   total[i] <- sum(lab[i], hw[i], quiz[i], test1[i], test2[i])
+  lab[i] <- score_lab(rawscores$ATT[i])*0.1
+  hw[i] <- (rawscores$Homework[i])*0.3
+  quiz[i] <- (rawscores$Quiz[i])*0.15
+  test1[i] <- (rawscores$Test1[i])*0.2
+  test2[i] <- (rawscores$Test2[i])*0.25
+  total[i] <- sum(lab[i], hw[i], quiz[i], test1[i], test2[i])
 }
- Overall <- total 
- rawscores <- cbind (rawscores,lab)
- rawscores <- cbind(rawscores, Overall)
+Overall <- total 
+rawscores <- cbind(rawscores, Overall)
 
 # letter Grade
 Grade <- c()
@@ -101,44 +107,31 @@ for(i in 1:334){
 
 rawscores <- cbind(rawscores, Grade)
 
-# sink ()
-sink(file = '../output/Lab-stats.txt')
-print_stats(lab)
-sink()
 
-sink(file = '../output/Homework-stats.txt')
-print_stats(hw)
-sink()
-
-sink(file = '../output/Quiz-stats.txt')
-print_stats(quiz)
-sink()
-
-sink(file = '../output/Test1-stats.txt')
-print_stats(test1)
-sink()
-
-sink(file = '../output/Test2-stats.txt')
-print_stats(test2)
-sink()
-
-sink(file = '../output/Overall-stats.txt')
-print_stats(Overall)
-sink()
+# sink () 
+for(i in 17:22){
+  if(colnames(rawscores)[i] =="Test1"){
+    sink(file = '../output/Test1-stats.txt')
+  }else if(colnames(rawscores)[i] =="Test2"){
+    sink(file = '../output/Test2-stats.txt')
+  }else if(colnames(rawscores)[i] =="Homework"){
+    sink(file = '../output/Homework-stats.txt')
+  }else if(colnames(rawscores)[i] =="Quiz"){
+    sink(file = '../output/Quiz-stats.txt')
+  }else if(colnames(rawscores)[i] =="Lab"){
+    sink(file = '../output/Lab-stats.txt')
+  }else{
+    sink(file = '../output/Overall-stats.txt')
+  }
+  
+  print_stats(rawscores[,i])
+  sink()
+}
 
 sink(file = '../output/summary-cleanscores.txt')
 str(rawscores, vec.len = 1)
 sink()
-
+  
 # export the clean data frame of scores to a CSV file
 write.csv(rawscores,"../data/cleandata/cleanscores.csv",row.names = FALSE)
 
-
-
-
-
-
-
-
-
-  

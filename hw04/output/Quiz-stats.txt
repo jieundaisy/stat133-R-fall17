@@ -1,11 +1,11 @@
-minimum  : 2.0833 
-percent10: 8.2875 
-quartile1: 10.4375 
-median   : 12.2708 
-mean     : 11.6796 
-quartile3: 13.5278 
-percent90: 14.4111 
-maximum  : 15.0000 
-range    : 12.9167 
-stdev    : 2.5698 
+minimum  : 13.8889 
+percent10: 55.2500 
+quartile1: 69.5833 
+median   : 81.8056 
+mean     : 77.8643 
+quartile3: 90.1852 
+percent90: 96.0741 
+maximum  : 100.0000 
+range    : 86.1111 
+stdev    : 17.1317 
 missing  : 0.0000 

@@ -104,15 +104,15 @@ get_median <- function(x, na.rm = FALSE){
     x <- remove_missing(x)
     m <- sort(x)
   }   
-    if(length(m) %%2 == 0){
-       i <- length(m)/2
-       md <- (m[i] + m[i+1])/2
-       return (md)
-     }else{
-       i <- (length(m)+1)/2
-       md <- m[i]
-       return (md)
-     }
+  if(length(m) %%2 == 0){
+    i <- length(m)/2
+    md <- (m[i] + m[i+1])/2
+    return (md)
+  }else{
+    i <- (length(m)+1)/2
+    md <- m[i]
+    return (md)
+  }
 }
 
 #' @title get_average 
@@ -124,14 +124,14 @@ get_average <- function(x, na.rm = FALSE){
   if (!is.numeric(x)) {
     stop("non-numeric argument")
   }
-
+  
   if(na.rm == TRUE){
     x <- remove_missing(x)
   }
-    sum_entries <- 0
-    for(i in 1:length(x)){
-     sum_entries<- sum_entries + x[i]
-    } 
+  sum_entries <- 0
+  for(i in 1:length(x)){
+    sum_entries<- sum_entries + x[i]
+  } 
   return(sum_entries/length(x))
 } 
 
@@ -152,8 +152,8 @@ get_stdev <- function(x, na.rm = FALSE){
   for(i in 1: length(x)){
     std <- std + (x[i]- get_average(x))^2
   }
-   std <- sqrt(std/(length(x)-1))
-   return (std)
+  std <- sqrt(std/(length(x)-1))
+  return (std)
 }
 
 #' @title get_quartile1
@@ -225,14 +225,14 @@ summary_stats <- function(x){
 #' @param x numeric vector
 #' @return the values of summary statistics in nice format  
 print_stats <- function (x){
-   title <- names(summary_stats(x))
-   max_char <- max(nchar(title))
-   for(i in 1:length(summary_stats(x))){
-     count_char <- nchar(title[i])
-     diff_char <- max_char - count_char
-     add_space <- paste(rep(" ",diff_char),collapse = '')
-     cat(paste0(title[i], add_space,':'), sprintf('%0.4f', summary_stats(x)[[i]]),'\n')
-   }
+  title <- names(summary_stats(x))
+  max_char <- max(nchar(title))
+  for(i in 1:length(summary_stats(x))){
+    count_char <- nchar(title[i])
+    diff_char <- max_char - count_char
+    add_space <- paste(rep(" ",diff_char),collapse = '')
+    cat(paste0(title[i], add_space,':'), sprintf('%0.4f', summary_stats(x)[[i]]),'\n')
+  }
 }
 
 #' @title rescale100
@@ -251,13 +251,13 @@ rescale100<- function(x,xmin,xmax){
 #' @param x numeric vector
 #' @return vector by dropping lowest value 
 drop_lowest <- function(x){
-     m <- get_minimum(x)
-     i <- 1
-    while(m != x[i]){
-      x[i] <- x[i] 
-      i <- i+1
-    }
-     return(x[-i])
+  m <- get_minimum(x)
+  i <- 1
+  while(m != x[i]){
+    x[i] <- x[i] 
+    i <- i+1
+  }
+  return(x[-i])
 }
 
 #' @title score_homework
@@ -311,4 +311,3 @@ score_lab <- function(x){
     return (0)
   }
 }
-

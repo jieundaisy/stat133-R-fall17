@@ -12,15 +12,15 @@ test_that ("remove_missing is to show a vector without NA", {
 
 context("find minimum")
 test_that ("get_minimum is minimum output in a numeric vector", {
-   a <- c(1, 4, 7, NA, 10)
-   b <- c(2, 2, 6, 8, 10)
-   c <- c(1, 3, 4, 5, NA, NA)
-   d <- c(5, NA)
-   expect_equal(get_minimum(a, na.rm = TRUE), 1)
-   expect_equal(get_minimum(b, na.rm = TRUE), 2)
-   expect_equal(get_minimum(c, na.rm = TRUE), 1)
-   expect_equal(get_minimum(d, na.rm = TRUE), 5)
-   
+  a <- c(1, 4, 7, NA, 10)
+  b <- c(2, 2, 6, 8, 10)
+  c <- c(1, 3, 4, 5, NA, NA)
+  d <- c(5, NA)
+  expect_equal(get_minimum(a, na.rm = TRUE), 1)
+  expect_equal(get_minimum(b, na.rm = TRUE), 2)
+  expect_equal(get_minimum(c, na.rm = TRUE), 1)
+  expect_equal(get_minimum(d, na.rm = TRUE), 5)
+  
 })
 
 context("find maximum")
@@ -186,16 +186,6 @@ test_that("score_lab is to compute lab score",{
   expect_equal(score_lab(6),0)
   expect_equal(score_lab(8),40)
 })
-
-
-
-
-
-
-
-
-
-
 
 
 
