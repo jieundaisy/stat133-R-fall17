@@ -44,7 +44,8 @@ table(position)
 # 2
 
 ```{r}
-plot(points,salary_m,col= "orange", main ="Scatterplot of Points and Salary",xlab="Points", ylab="Salary (in millions)")
+?par
+plot(points,salary_m,col= "orange", main ="Scatterplot of Points and Salary",xlab="Points", ylab="Salary (in millions)",cex=1.2,pch=0)
 ```
 
 # 3
@@ -102,11 +103,11 @@ regr_equation
 summary(regr_equation)
 ```
 
-# how do you interpret the slope coeffcient?
-# it represents the rate of change of salary_m (Y) as a function of changes in points(X).
+* how do you interpret the slope coeffcient?
+ * it represents the rate of change of salary_m (Y) as a function of changes in points(X).
 
-# how you interpret the intercept term?
-# The intercept is the expected mean value of salary_m (Y) when all points(X)=0.
+* how you interpret the intercept term?
+ * The intercept is the expected mean value of salary_m (Y) when all points(X)=0.
 
 ```{r}
 # what is the predicted salary for a player that score?
