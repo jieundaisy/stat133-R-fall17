@@ -2,8 +2,7 @@
 title: "post02"
 author: "JIEUN HWANG"
 date: "11/26/2017"
-output:
-  html_document: default
+output: "github_document"
 ---
 
 ```{r setup, include=FALSE}
